@@ -16,6 +16,6 @@ public class PrintUtils {
         for (int i = 0; i < winners.length; ++i) {
             System.out.print(winners[i] + " ");
         }
-        System.out.println("가 최종 우승 했습니다.");
+        System.out.println("가 최종 우승했습니다.");
     }
 }
