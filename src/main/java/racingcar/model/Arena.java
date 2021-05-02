@@ -1,19 +1,27 @@
 package racingcar.model;
 
+import racingcar.ui.PrintUtils;
+
 public class Arena {
 
-    private final int tryNumber;
-
-    public Arena(int tryNumber) {
-        checkTryNumber(tryNumber, "올바른 숫자가 아닙니다.");
-
-        this.tryNumber = tryNumber;
+    private final TryTime tryTime;
+    private final Cars cars;
+    public Arena(int tryNumber, Cars cars) {
+        this.tryTime = new TryTime(tryNumber);
+        this.cars = cars;
     }
 
 
+    void play() {
 
-    private void checkTryNumber(Integer tryNumber, String message) {
-        if(tryNumber < 0) throw new IllegalArgumentException(message);
+        int count = tryTime.getTime();
+        while(count-- > 0) {
+            cars.updateBoostNumber();
 
+            cars.printBoostNumber();
+        }
+
+        PrintUtils.printWinners(cars.getWinners());
     }
+
 }

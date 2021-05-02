@@ -16,8 +16,21 @@ public class Car {
         return name.getName();
     }
 
-    public void changeBoostNumber() {
-        number.changeBoostNumber(RandomNumberUtils.createNumber());
+    public int getNumber() {
+        return number.getNo();
     }
 
+    public void updateBoostNumber(int randomNo) {
+        if(randomNo >= 4) {
+            number.increment();
+        }
+    }
+
+    public void showBoost() {
+        System.out.print(name.getName() + ":");
+        for(int i=0; i< number.getNo(); ++i) {
+            System.out.print("-");
+        }
+        System.out.println();
+    }
 }

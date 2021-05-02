@@ -1,5 +1,7 @@
 package racingcar.model;
 
+import racingcar.ui.RandomNumberUtils;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -49,5 +51,40 @@ public class Cars {
             list.add(new Car(carList[i],0));
         }
         return list;
+    }
+
+    public void updateBoostNumber() {
+        for(int i=0; i< cars.size(); ++i) {
+            cars.get(i).updateBoostNumber(RandomNumberUtils.createNumber());
+        }
+    }
+
+    public void printBoostNumber() {
+        for(int i=0; i< cars.size(); ++i) {
+            cars.get(i).showBoost();
+        }
+    }
+
+    public String[] getWinners() {
+        List<String> cands = new ArrayList<>();
+        int maxValue = getMaxBoostNumber();
+        for(int i=0; i< cars.size(); ++i) {
+            addIfWinner(cands,maxValue,cars.get(i));
+        }
+        return cands.toArray(new String[cands.size()]);
+    }
+
+    private void addIfWinner(List<String> cands, int maxValue, Car car) {
+        if(car.getNumber() == maxValue) {
+            cands.add(car.getName());
+        }
+    }
+
+    private int getMaxBoostNumber() {
+        int maxValue = 0;
+        for(int i=0; i< cars.size(); ++i) {
+            maxValue = Math.max(cars.get(i).getNumber(), maxValue);
+        }
+        return maxValue;
     }
 }
