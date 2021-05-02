@@ -1,5 +1,7 @@
-package racingcar.model;
+package racingcar;
 
+import racingcar.model.Arena;
+import racingcar.model.Cars;
 import racingcar.ui.FastScanner;
 import racingcar.ui.PrintUtils;
 

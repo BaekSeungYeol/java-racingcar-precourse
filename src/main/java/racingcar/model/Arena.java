@@ -13,7 +13,7 @@ public class Arena {
     }
 
 
-    void play() {
+    public void play() {
 
         int count = tryTime.getTime();
         while (count-- > 0) {
