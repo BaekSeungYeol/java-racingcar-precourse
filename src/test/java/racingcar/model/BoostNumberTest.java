@@ -9,7 +9,7 @@ public class BoostNumberTest {
     @Test
     @DisplayName("전진을_위한_부스트_넘버_생성 성공")
     void createRandomNumberSuccess() {
-        BoostNumber boastNumber = new BoostNumber(9);
+        BoostNumber boastNumber = new BoostNumber(0);
     }
 
     @Test
