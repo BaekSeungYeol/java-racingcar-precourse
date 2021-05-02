@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.model;
 
 public class CarName {
 
@@ -7,6 +7,10 @@ public class CarName {
         checkEnglish(name, "이름은 영어여야 합니다.");
 
         this.name = name;
+    }
+
+    public String getName() {
+        return name;
     }
 
     private void checkEnglish(String name, String message) {
