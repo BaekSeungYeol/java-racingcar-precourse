@@ -25,6 +25,7 @@ class CarsTest {
                 "중복된 이름 입니다.");
 
     }
+
     @Test
     @DisplayName("자동차_이름_최소_한개_이상_테스트")
     void CarsNotEmpty() {

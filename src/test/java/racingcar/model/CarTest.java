@@ -10,7 +10,7 @@ public class CarTest {
     @DisplayName("전진_하는_조건의_숫자가_4이상")
     void GoBoostNumber() {
         int randomNumber = 4;
-        Car car = new Car("seung",0);
+        Car car = new Car("seung", 0);
         car.updateBoostNumber(randomNumber);
         assertThat(car.getNumber()).isEqualTo(1);
     }
@@ -19,7 +19,7 @@ public class CarTest {
     @DisplayName("전진_하는_조건의_숫자가_4미만")
     void StopBoostNumber() {
         int randomNumber = 3;
-        Car car = new Car("seung",0);
+        Car car = new Car("seung", 0);
         car.updateBoostNumber(randomNumber);
         assertThat(car.getNumber()).isEqualTo(0);
     }

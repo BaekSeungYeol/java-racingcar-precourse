@@ -1,7 +1,5 @@
 package racingcar.model;
 
-import racingcar.ui.RandomNumberUtils;
-
 public class Car {
 
     private CarName name;
@@ -21,14 +19,14 @@ public class Car {
     }
 
     public void updateBoostNumber(int randomNo) {
-        if(randomNo >= 4) {
+        if (randomNo >= 4) {
             number.increment();
         }
     }
 
     public void showBoost() {
         System.out.print(name.getName() + ":");
-        for(int i=0; i< number.getNo(); ++i) {
+        for (int i = 0; i < number.getNo(); ++i) {
             System.out.print("-");
         }
         System.out.println();

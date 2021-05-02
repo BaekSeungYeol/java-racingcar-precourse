@@ -3,6 +3,7 @@ package racingcar.model;
 public class CarName {
 
     private final String name;
+
     public CarName(String name) {
         checkEnglish(name, "이름은 영어여야 합니다.");
 
@@ -14,13 +15,13 @@ public class CarName {
     }
 
     private void checkEnglish(String name, String message) {
-        for(int i=0; i< name.length(); ++i) {
+        for (int i = 0; i < name.length(); ++i) {
             validAlp(name.charAt(i), message);
         }
     }
 
     public static void validAlp(char alp, String message) {
-        if(alp < 'a' || alp > 'z') {
+        if (alp < 'a' || alp > 'z') {
             throw new IllegalArgumentException(message);
         }
 

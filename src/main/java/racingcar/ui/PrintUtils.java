@@ -1,7 +1,5 @@
 package racingcar.ui;
 
-import racingcar.model.Cars;
-
 public class PrintUtils {
 
     public static void start() {
@@ -15,7 +13,7 @@ public class PrintUtils {
 
 
     public static void printWinners(String... winners) {
-        for(int i=0; i< winners.length; ++i) {
+        for (int i = 0; i < winners.length; ++i) {
             System.out.print(winners[i] + " ");
         }
         System.out.println("가 최종 우승 했습니다.");

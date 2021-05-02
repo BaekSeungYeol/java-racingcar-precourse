@@ -11,7 +11,7 @@ public class TryTime {
     }
 
     private void checkTryNumber(Integer tryNumber, String message) {
-        if(tryNumber < 0) throw new IllegalArgumentException(message);
+        if (tryNumber < 0) throw new IllegalArgumentException(message);
     }
 
     public int getTime() {

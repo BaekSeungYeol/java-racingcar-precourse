@@ -2,7 +2,6 @@ package racingcar.model;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import racingcar.model.CarName;
 
 public class CarNameTest {
 
