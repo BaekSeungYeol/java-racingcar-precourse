@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import static org.assertj.core.api.Assertions.assertThat;
 
 class CarsTest {
 
@@ -34,6 +35,16 @@ class CarsTest {
         Assertions.assertThrows(IllegalArgumentException.class,
                 () -> new Cars(list),
                 "최소 하나의 자동차 이름은 입력해주세요.");
+
+    }
+
+    @Test
+    @DisplayName("승자_구하기_2명이상")
+    void showWinners() {
+        Cars cars = new Cars("seungyeol,poby");
+        String[] winners = cars.getWinners();
+
+        assertThat(winners.length).isEqualTo(2);
 
     }
 }
