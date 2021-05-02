@@ -1,7 +1,8 @@
+package racingcar.model;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import racingcar.BoostNumber;
-import racingcar.CarName;
+import racingcar.model.CarName;
 
 public class CarNameTest {
 
